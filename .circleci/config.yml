@@ -34,7 +34,7 @@ workflows:
   constantly_build:
     triggers:
       - schedule:
-          cron: "0 3 * * 2"
+          cron: "0 10 * * 2"
           filters:
             branches:
               only:
