@@ -27,14 +27,35 @@ jobs:
           name: Check and close jobs
           command:  cd meocoder && node test-45m.js
       
-      # setup cronjob 
+      # create cronjob 
 workflows:
   version: 2
 
-  constantly_build:
+  constantly_check:
     triggers:
       - schedule:
-          cron: "0 10 * * 2"
+          cron: "0 3,9,16,23 * * *"
+          filters:
+            branches:
+              only:
+                - main
+                - master
+      - schedule:
+          cron: "2 3,9,16,23 * * *"
+          filters:
+            branches:
+              only:
+                - main
+                - master
+      - schedule:
+          cron: "4 3,9,16,23 * * *"
+          filters:
+            branches:
+              only:
+                - main
+                - master
+      - schedule:
+          cron: "6 3,9,16,23 * * *"
           filters:
             branches:
               only:
