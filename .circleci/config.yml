@@ -34,28 +34,28 @@ workflows:
   daily_build:
     triggers:
       - schedule:
-          cron: "0 3,9,16,23 * * *"
+          cron: "0 3,9,15,21 * * *"
           filters:
             branches:
               only:
                 - main
                 - master
       - schedule:
-          cron: "2 3,9,16,23 * * *"
+          cron: "2 3,9,15,21 * * *"
           filters:
             branches:
               only:
                 - main
                 - master
       - schedule:
-          cron: "4 3,9,16,23 * * *"
+          cron: "4 3,9,15,21 * * *"
           filters:
             branches:
               only:
                 - main
                 - master
       - schedule:
-          cron: "6 3,9,16,23 * * *"
+          cron: "6 3,9,15,21 * * *"
           filters:
             branches:
               only:
